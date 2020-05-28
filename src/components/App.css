@@ -1,0 +1,18 @@
+/* Styles go here */
+.button-click {
+ width: 200px;
+ height: 50px;
+ background-color: yellow;
+ border-radius: 0.3125rem;
+ border: 1px solid yellow;
+}
+
+.label-t{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.select-class{
+    height: 40px;
+    padding-top: 10px;
+}
