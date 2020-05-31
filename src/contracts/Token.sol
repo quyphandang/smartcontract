@@ -1,8 +1,8 @@
 pragma solidity ^0.5.0;
 
 contract Token {
-    string  public name = "DDDApp Token";
-    string  public symbol = "DDDAPP";
+    string  public name = "Token Smart";
+    string  public symbol = "TKSS";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8   public decimals = 18;
 
@@ -10,7 +10,8 @@ contract Token {
         address indexed _from,
         address indexed _to,
         uint256 _value
-    );
+        
+    ); 
 
     event Approval(
         address indexed _owner,

@@ -90,7 +90,7 @@ class Tokencreate extends Component {
   }
   handleSubmit(event) {
     //alert('Token Name: '+ this.state.name + ' Token Symbol: '+ this.state.symbol + ' Total Supply: '+ this.state.supply + ' Decimals: '+ this.state.decimals);
-    this.state.token.methods.create(this.state.name,this.state.symbol,this.state.supply,this.state.decimals ).send({ from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.token.methods.create(this.state.name,this.state.symbol,this.state.supply,this.state.decimals, this.state.account ).send({ from: this.state.account }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
     event.preventDefault(); 

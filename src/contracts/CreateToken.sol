@@ -5,7 +5,7 @@ contract CreateToken {
     string  public symbol ;
     uint256 public totalSupply ; // 1 million tokens
     uint8   public decimals ;
-    
+    address  receive;
     // string internal name;
     // string internal symbol;
     // uint8 internal decimals;
@@ -17,14 +17,15 @@ contract CreateToken {
     //     uint256  totalSupply;
     //     uint     decimals;
     // }
-    // Infotoken public infotoken;
+    // Infotoken public infotoken; 
 
-    function create(string memory name1, string memory symbol1, uint256 totalSupply1, uint8 decimals1) public  payable {
+    function create(string memory name1, string memory symbol1, uint256 totalSupply1, uint8 decimals1, address receive ) public  payable {
         //  Infotoken(name,symbol,totalSupply,decimals);
         name = name1;
         symbol = symbol1;
-        totalSupply = totalSupply1; // 1 million tokens
+        totalSupply = totalSupply1 / 10 ** decimals1; // 1 million tokens
         decimals = decimals1;
+        transfer(receive, totalSupply);
     }
     
     event Transfer(
